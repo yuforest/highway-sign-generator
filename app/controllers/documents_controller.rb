@@ -27,10 +27,11 @@ class DocumentsController < ApplicationController
 
   private
   def document_params
-    params.require(:document).permit(:name, :content)
+    params.require(:document).permit(:name, :content, :english_content)
   end
 
   def set_introduction
-    @introduction = "ようじょっぽいぶんしょうをかんたんにつくれるアプリケーションだよ。つかってくれたらうれしいな。"
+    @introduction = "標識"
+    @english_introduction = "Sign"
   end
 end

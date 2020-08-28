@@ -7,21 +7,28 @@ body,
 footer {
   margin-top: auto;
 }
-.btn.btn-pink {
+.btn.btn-sign-green {
   color: white;
-  background-color: #F3A4B5;
+  background-color: #187231;
   &:hover {
     color: white;
   }
 }
 
+.bg-sign-green {
+  background-color: #187231;
+}
+.text-sign-green {
+  color: #187231;
+}
+
 .dropdown-menu .dropdown-item:active {
   color: #fff;
   text-decoration: none;
-  background-color: #F3A4B5;
+  background-color: #187231;
 }
 
 .pagination .page-item.active .page-link {
-  background-color: #F3A4B5;
-  border-color: #F3A4B5;
+  background-color: #187231;
+  border-color: #187231;
 }

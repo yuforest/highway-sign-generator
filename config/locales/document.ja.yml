@@ -2,5 +2,5 @@ ja:
   activerecord:
     attributes:
       document:
-        name: おなまえ
-        content: ないよう
+        content: 表示する文字
+        english_content: 表示する英語

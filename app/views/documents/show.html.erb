@@ -1,22 +1,21 @@
-<% set_meta_tags title: @document.name + "さんのようじょぶんしょ",
-                 description: @document.content,
+<% set_meta_tags title: @document.content,
+                 description: @document.content + "の高速道路標識",
                  og: {
-                   title: @document.name + "さんのようじょぶんしょ",
-                   description: @document.content,
+                   title: @document.content,
+                   description: @document.content + "の高速道路標識",
                    image: ogp_images_url(text: @document.content.gsub(/[ ]/,""))
                  }
 %>
 
 <div class="container mt-4">
   <section class="my-4">
-    <img class="w-100 d-block" src="<%= ogp_images_url(text: @document.content) %>">
-    <p class="font-size-sm text-right"><%= @document.name %>さんがさくせい</p>
+    <img class="w-100 d-block" src="<%= ogp_images_url(text: @document.content, english_text: @document.english_content) %>">
     <div class="mt-3 pt-2 border-top border-primary d-flex justify-content-between">
       <div>
         <i class="fas fa-eye mr-1"></i>
         <%= number_with_delimiter(@page_views) %>
       </div>
-      <%= render "shared/components/document_buttons", url: document_url(@document), title: @document.name + "さんのようじょぶんしょ", document: @document %>
+      <%= render "shared/components/document_buttons", url: document_url(@document), title: @document.content, document: @document %>
     </div>
   </section>
 </div>

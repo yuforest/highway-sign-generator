@@ -1,16 +1,13 @@
 <%= form_with model: @document, local: true do |f| %>
   <div class="form-group">
     <%= f.label :content %>
-    <small class="text-red d-block">
-      漢字やアルファベットは使用できません。
-    </small>
-    <%= f.text_area :content, class: 'form-control', rows: 5 %>
+    <%= f.text_field :content, class: 'form-control', rows: 5 %>
   </div>
   <div class="form-group">
-    <%= f.label :name %>(任意)
-    <%= f.text_field :name, class: 'form-control' %>
+    <%= f.label :english_content %>
+    <%= f.text_field :english_content, class: 'form-control' %>
   </div>
   <div class="form-group">
-    <%= f.submit 'そうしん', class: 'btn btn-pink' %>
+    <%= f.submit '送信', class: 'btn btn-sign-green' %>
   </div>
 <% end %>

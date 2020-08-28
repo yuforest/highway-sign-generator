@@ -1,18 +1,18 @@
-<% set_meta_tags title: "ようじょぶんしょジェネレータ",
-                 description: "ようじょぶんしょジェネレータは幼女のようなフォントで書いた文章の画像を簡単に生成できるアプリケーションです。作った文書はシェアしたり、ダウンロードしたりできます。",
+<% set_meta_tags title: "高速道路標識ジェネレータ",
+                 description: "高速道路標識ジェネレータは幼女のようなフォントで書いた文章の画像を簡単に生成できるアプリケーションです。作った文書はシェアしたり、ダウンロードしたりできます。",
                  og: {
-                   title: "ようじょぶんしょジェネレータ",
-                   description: "ようじょぶんしょジェネレータは幼女のようなフォントで書いた文章の画像を簡単に生成できるアプリケーションです。作った文書はシェアしたり、ダウンロードしたりできます。",
-                   image: ogp_images_url(text: @introduction)
+                   title: "高速道路標識ジェネレータ",
+                   description: "高速道路標識ジェネレータは幼女のようなフォントで書いた文章の画像を簡単に生成できるアプリケーションです。作った文書はシェアしたり、ダウンロードしたりできます。",
+                   image: ogp_images_url(text: @introduction, english_text: @english_introduction)
                  }
 %>
 <div class="container mt-4">
   <section class="my-4">
     <div class="d-md-flex d-block justify-content-between align-items-center">
       <h2 class="display-4">
-        ようじょぶんしょいちらん
+        高速道路標識いちらん
       </h2>
-      <%= link_to "ようじょぶんしょをつくる", new_document_path, class: 'btn btn-pink' %>
+      <%= link_to "高速道路標識をつくる", new_document_path, class: 'btn btn-sign-green' %>
     </div>
     <% @documents.each do |document| %>
       <%= render "shared/components/document_list_item", document: document %>

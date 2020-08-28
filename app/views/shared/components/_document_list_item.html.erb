@@ -1,13 +1,12 @@
 <div class="mt-3">
   <%= link_to document_path(document), class: 'd-block' do %>
-    <img class="w-100" src="<%= ogp_images_url(text: document.content) %>">
+    <img class="w-100" src="<%= ogp_images_url(text: document.content, english_text: document.english_content) %>">
   <% end %>
-  <p class="font-size-sm text-right"><%= document.name %>さんがさくせい</p>
 </div>
 <div class="mt-3 pt-2 border-top d-flex justify-content-between">
   <div>
     <i class="fas fa-eye mr-1"></i>
     <%= number_with_delimiter(document.impressionist_count) %>
   </div>
-  <%= render "shared/components/document_buttons", url: document_url(document), content: document.name + "さんのようじょぶんしょ", document: document %>
+  <%= render "shared/components/document_buttons", url: document_url(document), content: document.content, document: document %>
 </div>
